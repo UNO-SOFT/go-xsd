@@ -3,11 +3,11 @@ package main
 import (
 	"encoding/xml"
 
-	"github.com/metaleap/go-xsd/xsd-makepkg/tests"
+	"github.com/UNO-SOFT/go-xsd/xsd-makepkg/tests"
 
-	"github.com/metaleap/go-util/dev/go"
+	"github.com/UNO-SOFT/go-xsd/util/dev/go"
 
-	rss "github.com/metaleap/go-xsd-pkg/thearchitect.co.uk/schemas/rss-2_0.xsd_go"
+	rss "github.com/UNO-SOFT/go-xsd-pkg/thearchitect.co.uk/schemas/rss-2_0.xsd_go"
 )
 
 type RssDoc struct {
@@ -17,7 +17,7 @@ type RssDoc struct {
 
 func main() {
 	var (
-		dirBasePath  = udevgo.GopathSrcGithub("metaleap", "go-xsd", "xsd-makepkg", "tests", "xsd-test-rss")
+		dirBasePath  = udevgo.GopathSrcGithub("UNO-SOFT", "go-xsd", "xsd-makepkg", "tests", "xsd-test-rss")
 		makeEmptyDoc = func() interface{} { return &RssDoc{} }
 	)
 	tests.TestViaRemarshal(dirBasePath, makeEmptyDoc)
